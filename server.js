@@ -8,12 +8,11 @@ const cors = require('cors');
 const app = express();
 const port = 5000;
 
-const db = mysql.createConnection({
-    host: '127.0.0.1',
-    user: 'root',
-    password : '',
-    database : 'user-login-flow'
-});
+const url = process.env.MYSQL_ADDON_URI
+
+const db = mysql.createConnection(url);
+
+
 
 db.connect((err)=>{
     if(err){
