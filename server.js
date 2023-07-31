@@ -1,5 +1,5 @@
 // Create the server and connect to the MySQL database
-
+require('dotenv').config();
 const express =require('express');
 const bodyParser = require('body-parser');
 const mysql = require('mysql');
