@@ -9,7 +9,7 @@ const app = express();
 const port = 5000;
 
 
-const url = process.env.URL
+const url = process.env.MYSQL_ADDON_URI
 
 const db = mysql.createConnection(url);
 
@@ -34,7 +34,6 @@ app.get('/api/users', (req, res) => {
       return res.json(result);
     });
   });
-
 
 
   app.post('/api/login', (req, res) => {
